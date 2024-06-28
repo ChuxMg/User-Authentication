@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AuthContent from "../components/Auth/AuthContent";
-import { createUser } from "../Util/auth";
+import { createUser } from "../util/auth";
 import LoadingOverlay from "../components/ui/LoadingOverlay";
 
 function SignupScreen() {
@@ -22,7 +22,7 @@ function SignupScreen() {
   if (isAuthenticating) {
     return <LoadingOverlay message="Creating user..." />;
   }
-  
+
   return <AuthContent onAuthenticate={signupHandler} />;
 }
 
